@@ -1,5 +1,24 @@
 ## Unreleased
 
+###### Gameplay
+- Fixed sustainable-economy reset when using tips.
+- Fixed tech-based output for farms and power stations.
+
+###### User Interface
+- Fixed cars not spawning on track/road/rail.
+
+###### Internal
+- Removed binary saving feature.
+- Removed unneeded image source files from install.
+- Fixed an error raised by CPack for missing README.md file.
+
+###### Documentation
+- Fixed several inconsistencies in translated help pages.
+- Added a script for detecting inconsistencies in translated help pages.
+- Fixed the tip icon in help pages.
+- Added Italian translation for .desktop file.
+- Fixed a typo in the rocket help page.
+
 
 ## LinCity-NG 2.11.1
 
