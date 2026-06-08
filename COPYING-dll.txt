@@ -29,17 +29,17 @@ of the GNOME project and falls under the MIT License.
 (https://libxmlplusplus.github.io/libxmlplusplus/) and falls under the LGPL
 version 2 or above.
 
-`SDL2.dll` is provided by SDL (http://libsdl.org) and falls under the MIT
+`SDL3.dll` is provided by SDL (http://libsdl.org) and falls under the ZLIB
 License.
 
-`SDL2_image.dll` is provided by SDL
-(https://github.com/libsdl-org/SDL_image) and falls under the ZLIB License.
+`SDL3_image.dll` is provided by SDL (https://github.com/libsdl-org/SDL_image)
+and falls under the ZLIB License.
 
-`SDL2_mixer.dll` is provided by SDL
-(http://www.libsdl.org/projects/SDL_mixer) and falls under the ZLIB License.
+`SDL3_mixer.dll` is provided by SDL (http://www.libsdl.org/projects/SDL_mixer)
+and falls under the ZLIB License.
 
-`SDL2_ttf.dll` is provided by SDL (http://libsdl.org) and falls under the MIT
-License.
+`SDL3_ttf.dll` is provided by SDL (https://github.com/libsdl-org/SDL_ttf) and
+falls under the ZLIB License.
 
 `zlib1.dll` is provided by zlib (https://www.zlib.net/) and falls under the ZLIB
 License.

@@ -21,9 +21,9 @@
 11. Create a signed tag for the release.
     - `git tag -sm "LinCity-NG $version" lincity-ng-$version`
 12. Configure and build Linux and Windows release packages and a source package.
-    - `cmake -B build/linux/ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DLINCITYNG_RELOCATABLE=ON`
+    - `cmake -B build/linux/ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH=/usr/local -DLINCITYNG_RELOCATABLE=ON --fresh`
     - `cmake --build build/linux/ -j12 -t package package_source`
-    - `x86_64-w64-mingw32-cmake -B build/win64/ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH="C:\\Program Files\\lincity-ng" -DLINCITYNG_RELOCATABLE=ON`
+    - `x86_64-w64-mingw32-cmake -B build/win64/ -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX:PATH="C:\\Program Files\\lincity-ng" -DLINCITYNG_RELOCATABLE=ON --fresh`
     - `cmake --build build/win64/ -j12 -t package`
 13. Test Linux and Windows release builds.
     - `./build/linux/bin/lincity-ng --config run/lincity-ng-reloc.config`

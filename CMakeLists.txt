@@ -208,11 +208,22 @@ if(WIN32)
 		]])
 	endif()
 
+  set(DLL_DIRS)
+  foreach(MINGW_ROOT ${CMAKE_FIND_ROOT_PATH})
+    list(APPEND DLL_DIRS "${MINGW_ROOT}/bin")
+  endforeach()
 	install(RUNTIME_DEPENDENCY_SET dll_dependencies
-		DIRECTORIES ${CMAKE_FIND_ROOT_PATH}/bin  # dll's from mingw
-		UNRESOLVED_DEPENDENCIES_VAR DUMMY  # hacky!
+		DIRECTORIES ${DLL_DIRS}
+    PRE_EXCLUDE_REGEXES
+      "^(advapi|gdi|imm|kernel|ole|oleaut|shell|user)32\.dll$"
+      "^(setupapi|version|winmm)\.dll$"
+      "^api-ms-win-crt-.*\.dll$"
+      "^bcrypt\.dll$"
+		# UNRESOLVED_DEPENDENCIES_VAR DUMMY  # hacky!
 		RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
 	)
+  # when cross-compiling, may need to symlink DLLs to have lowercase names
+  # see https://gitlab.kitware.com/cmake/cmake/-/work_items/26359 .
 endif()
 # if (WIN32)
 # 	install(FILES $<TARGET_PDB_FILE:lincity-ng> DESTINATION . OPTIONAL)
